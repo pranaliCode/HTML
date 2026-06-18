@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>svg sister tag</title>
+</head>
+<body>
+    <svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+
+  <defs>
+    <!-- Background -->
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#FFEAF5"/>
+      <stop offset="100%" stop-color="#F7F4FF"/>
+    </linearGradient>
+
+    <!-- Moon Glow -->
+    <radialGradient id="moonGlow">
+      <stop offset="0%" stop-color="#FFF9C4" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFF9C4" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Heart Gradient -->
+    <linearGradient id="heartGrad" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FF4081"/>
+      <stop offset="100%" stop-color="#D81B60"/>
+    </linearGradient>
+
+    <!-- Dresses -->
+    <linearGradient id="dress1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7E57C2"/>
+      <stop offset="100%" stop-color="#B39DDB"/>
+    </linearGradient>
+
+    <linearGradient id="dress2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#EC407A"/>
+      <stop offset="100%" stop-color="#F8BBD0"/>
+    </linearGradient>
+
+    <filter id="softShadow">
+      <feDropShadow dx="0" dy="5" stdDeviation="6"
+                    flood-color="#999" flood-opacity="0.35"/>
+    </filter>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="800" fill="url(#bg)"/>
+
+  <!-- Magical Glow -->
+  <circle cx="600" cy="170" r="180" fill="url(#moonGlow)"/>
+
+  <!-- Stars -->
+  <g fill="#FFD54F">
+    <circle cx="180" cy="120" r="3"/>
+    <circle cx="260" cy="90" r="2"/>
+    <circle cx="350" cy="150" r="3"/>
+    <circle cx="800" cy="100" r="2"/>
+    <circle cx="920" cy="130" r="3"/>
+    <circle cx="1030" cy="90" r="2"/>
+  </g>
+
+  <!-- Decorative Heart Outline -->
+  <path d="
+      M600 620
+      C250 390 120 240 120 120
+      C120 20 220 -40 320 -40
+      C430 -40 520 50 600 150
+      C680 50 770 -40 880 -40
+      C980 -40 1080 20 1080 120
+      C1080 240 950 390 600 620 Z"
+      fill="none"
+      stroke="#F48FB1"
+      stroke-width="8"
+      opacity="0.55"/>
+
+  <!-- Floating Hearts -->
+  <g fill="#FF80AB" opacity="0.9">
+    <path d="M280 220 C280 200 305 200 305 220 C305 240 280 260 280 260 C280 260 255 240 255 220 C255 200 280 200 280 220Z"/>
+    <path d="M920 220 C920 200 945 200 945 220 C945 240 920 260 920 260 C920 260 895 240 895 220 C895 200 920 200 920 220Z"/>
+  </g>
+
+  <!-- Garden -->
+  <rect y="650" width="1200" height="150" fill="#7ED957"/>
+
+  <!-- Flowers -->
+  <g>
+    <g transform="translate(170,640)">
+      <circle cx="0" cy="0" r="10" fill="#FF4081"/>
+      <circle cx="-10" cy="-10" r="10" fill="#FF4081"/>
+      <circle cx="10" cy="-10" r="10" fill="#FF4081"/>
+      <circle cx="0" cy="-20" r="10" fill="#FF4081"/>
+      <circle cx="0" cy="-10" r="6" fill="#FFD54F"/>
+      <line x1="0" y1="0" x2="0" y2="40" stroke="green" stroke-width="3"/>
+    </g>
+
+    <g transform="translate(1030,640)">
+      <circle cx="0" cy="0" r="10" fill="#7C4DFF"/>
+      <circle cx="-10" cy="-10" r="10" fill="#7C4DFF"/>
+      <circle cx="10" cy="-10" r="10" fill="#7C4DFF"/>
+      <circle cx="0" cy="-20" r="10" fill="#7C4DFF"/>
+      <circle cx="0" cy="-10" r="6" fill="#FFD54F"/>
+      <line x1="0" y1="0" x2="0" y2="40" stroke="green" stroke-width="3"/>
+    </g>
+  </g>
+
+  <!-- Sister Dhanshri -->
+  <g transform="translate(400,290)" filter="url(#softShadow)">
+    <circle cx="70" cy="65" r="38" fill="#F4C7A1"/>
+    <ellipse cx="70" cy="50" rx="45" ry="45" fill="#4E342E"/>
+    <circle cx="58" cy="65" r="3" fill="#222"/>
+    <circle cx="82" cy="65" r="3" fill="#222"/>
+    <path d="M58 82 Q70 92 82 82" fill="none" stroke="#333" stroke-width="2"/>
+
+    <path d="M35 110 L105 110 L140 250 L0 250 Z"
+          fill="url(#dress1)"/>
+
+    <line x1="105" y1="140" x2="180" y2="145"
+          stroke="#F4C7A1"
+          stroke-width="10"
+          stroke-linecap="round"/>
+
+    <line x1="45" y1="250" x2="40" y2="340"
+          stroke="#333"
+          stroke-width="8"/>
+
+    <line x1="95" y1="250" x2="100" y2="340"
+          stroke="#333"
+          stroke-width="8"/>
+
+    <text x="70" y="395"
+          text-anchor="middle"
+          font-size="32"
+          font-family="Georgia"
+          fill="#6A1B9A"
+          font-weight="bold">
+      Dhanshri
+    </text>
+  </g>
+
+  <!-- Sister Pranali -->
+  <g transform="translate(660,290)" filter="url(#softShadow)">
+    <circle cx="70" cy="65" r="38" fill="#F4C7A1"/>
+    <ellipse cx="70" cy="50" rx="45" ry="45" fill="#212121"/>
+    <circle cx="58" cy="65" r="3" fill="#222"/>
+    <circle cx="82" cy="65" r="3" fill="#222"/>
+    <path d="M58 82 Q70 92 82 82" fill="none" stroke="#333" stroke-width="2"/>
+
+    <path d="M35 110 L105 110 L140 250 L0 250 Z"
+          fill="url(#dress2)"/>
+
+    <line x1="35" y1="140" x2="-40" y2="145"
+          stroke="#F4C7A1"
+          stroke-width="10"
+          stroke-linecap="round"/>
+
+    <line x1="45" y1="250" x2="40" y2="340"
+          stroke="#333"
+          stroke-width="8"/>
+
+    <line x1="95" y1="250" x2="100" y2="340"
+          stroke="#333"
+          stroke-width="8"/>
+
+    <text x="70" y="395"
+          text-anchor="middle"
+          font-size="32"
+          font-family="Georgia"
+          fill="#C2185B"
+          font-weight="bold">
+      Pranali
+    </text>
+  </g>
+
+  <!-- Shared Heart -->
+  <g transform="translate(600,450)" filter="url(#glow)">
+    <path d="
+      M0 25
+      C0 -15 50 -15 50 25
+      C50 60 0 95 0 95
+      C0 95 -50 60 -50 25
+      C-50 -15 0 -15 0 25 Z"
+      fill="url(#heartGrad)"/>
+  </g>
+
+  <!-- Friendship Ribbon -->
+  <path d="M470 470 Q600 520 730 470"
+        fill="none"
+        stroke="#FFD54F"
+        stroke-width="8"
+        stroke-linecap="round"/>
+
+  <!-- Main Title -->
+  <text x="600" y="95"
+        text-anchor="middle"
+        font-family="Georgia"
+        font-size="52"
+        font-weight="bold"
+        fill="#AD1457">
+    Sisters Forever
+  </text>
+
+  <!-- Quote -->
+  <text x="600" y="140"
+        text-anchor="middle"
+        font-family="Verdana"
+        font-size="22"
+        fill="#666">
+    Different flowers from the same garden 🌸
+  </text>
+
+  <!-- Bottom Dedication -->
+  <text x="600" y="740"
+        text-anchor="middle"
+        font-family="Georgia"
+        font-size="34"
+        font-weight="bold"
+        fill="#8E24AA">
+    Dhanshri ♥ Pranali
+  </text>
+
+</svg>
+</body>
+</html>
